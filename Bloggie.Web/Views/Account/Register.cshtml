@@ -1,0 +1,42 @@
+﻿@model Bloggie.Web.Models.ViewModels.RegisterViewModel
+
+@{
+}
+
+<div class="container mx-auto">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6">
+            <h1 class="mt-3 mb-3 h3 account-heading">
+                Register
+            </h1>
+            <form method="post">
+                <div class="mb-3">
+                    <input type="text" id="username" class="form-control"
+                           asp-for="Username" placeholder="Username" required>
+                    <span class="text-danger" asp-validation-for="Username"></span>
+                </div>
+                <div class="mb-3">
+                    <input type="email" id="email" class="form-control"
+                           asp-for="Email" placeholder="Email address" required>
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="password" class="form-control"
+                           asp-for="Password" placeholder="Password" required minlenght="6">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button class="btn btn-dark text-dark btn-sign-up" type="submit">Register</button>
+                </div>
+                <p class="small-text">
+                    By signing up, you agree to Bloggie's <strong>Terms of Service</strong> and <strong>Privacy Policy,</strong>
+                    and agree to receive marketing communications from Bloggies at the email
+                    address provided. This page is protected by reCAPTCHA and is subject to
+                    Google's <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>
+                </p>
+
+            </form>
+        </div>
+    </div>
+</div>
